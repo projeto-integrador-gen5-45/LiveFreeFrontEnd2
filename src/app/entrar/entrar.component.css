@@ -1,0 +1,16 @@
+#img-bg {
+background-image:url('https://i.imgur.com/qjNBkcK.jpg');
+min-height: 100vh;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.btn-entrar {
+  background-color: #fad54e;
+}
+
+.btn-entrar:hover {
+  background-color: #b11f20;
+  color: white;
+}
