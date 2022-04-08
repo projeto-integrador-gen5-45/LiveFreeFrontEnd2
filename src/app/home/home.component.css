@@ -1,3 +1,5 @@
+
+
 .bg-home{
     height: 100vh;
     background-image: url("https://i.imgur.com/OqL19K1.jpg");
@@ -28,8 +30,6 @@
     background-color: #fad54e;
     color: black !important;
 }
-
-
 
 .gap-home{
      gap: 12px;

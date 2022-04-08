@@ -9,6 +9,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
 import { HomeComponent } from './home/home.component';
+import { ServicoEditComponent } from './edit/servico-edit/servico-edit.component';
 
 const routes: Routes = [
 
@@ -24,7 +25,7 @@ const routes: Routes = [
 
 {path: 'categoria-edit/:id', component:CategoriaEditComponent},
 {path: 'categoria-delete/:id', component:CategoriaDeleteComponent},
-{path: 'servico-edit/:id', component: ServicoDeleteComponent},
+{path: 'servico-edit/:id', component: ServicoEditComponent},
 {path: 'servico-delete/:id', component: ServicoDeleteComponent},
 {path: 'user-edit/:id', component:UserEditComponent}
 
