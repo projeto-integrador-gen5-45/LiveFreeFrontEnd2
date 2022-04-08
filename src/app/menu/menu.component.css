@@ -1,6 +1,16 @@
 .fs-16{
   font-size: 16pt;
 }
+
 a {
   cursor:pointer;
+}
+
+.navbar-livefree {
+  background-color: #211e16;
+  color: white !important;
+}
+
+.espacinho {
+  margin-left: -10px;
 }
