@@ -5,11 +5,12 @@ import { CategoriaComponent } from './categoria/categoria.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { EntrarComponent } from './entrar/entrar.component';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
 import { HomeComponent } from './home/home.component';
 import { ServicoEditComponent } from './edit/servico-edit/servico-edit.component';
+import { SobreComponent } from './sobre/sobre.component';
 
 const routes: Routes = [
 
@@ -27,12 +28,13 @@ const routes: Routes = [
 {path: 'categoria-delete/:id', component:CategoriaDeleteComponent},
 {path: 'servico-edit/:id', component: ServicoEditComponent},
 {path: 'servico-delete/:id', component: ServicoDeleteComponent},
-{path: 'user-edit/:id', component:UserEditComponent}
+{path: 'user-edit/:id', component:UserEditComponent},
+{path: 'sobre', component: SobreComponent}
 
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+exports: [RouterModule]
 })
 export class AppRoutingModule { }

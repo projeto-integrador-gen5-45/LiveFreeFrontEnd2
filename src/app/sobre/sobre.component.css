@@ -1,0 +1,149 @@
+.container{
+
+    background-color: #e9d383;
+
+}
+.jumbotron{
+
+    background-color: #feffff;
+}
+.bg-sobre{
+    background-color: #fad54e;
+    }
+
+#img-bg{
+    background-image: url('https://i.imgur.com/zSiiTV8.jpg');
+    min-height: 969px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.team {
+    background: #fff;
+    padding-bottom: 30px;
+  }
+  .team .member {
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .team .member .member-img {
+    position: relative;
+    overflow: hidden;
+    max-width: 350px;
+    max-height: 350px;
+    border-radius: 50%;
+  }
+  .team .member .social {
+    position: absolute;
+    left: 0;
+    bottom: -40px;
+    right: 0;
+    height: 80px;
+    opacity: 0;
+    transition: bottom ease-in-out 0.4s;
+    text-align: center;
+    background: rgba(236, 233, 32, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .team .member .social a {
+    transition: color 0.3s;
+    color: #fff;
+    margin: 0 5px;
+    display: inline-block;
+  }
+  .team .member .social a:hover {
+    color: #68A4C4;
+  }
+  .team .member .social i {
+    font-size: 18px;
+    margin: 0 2px;
+  }
+  .team .member .member-info h4 {
+    font-weight: 700;
+    margin: 15px 0 5px 0;
+    font-size: 18px;
+  }
+  .team .member .member-info span {
+    display: block;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: #68A4C4;
+  }
+  .team .member .member-info p {
+    font-style: italic;
+    font-size: 14px;
+    line-height: 26px;
+    color: #666;
+  }
+  .team .member:hover .social {
+    bottom: 0;
+    opacity: 1;
+    transition: bottom ease-in-out 0.4s;
+  }
+  .team .member:hover .social a, .team .member:hover .social i {
+    line-height: 0;
+    font-size: 45px;
+  }
+
+.gap-sobre{
+
+    gap: 12px;
+
+}
+
+.btn-entrar {
+    border-radius: 10px;
+    border: 1px solid #fad54e;
+}
+
+.btn-entrar:hover {
+    border-radius: 10px;
+    background-color: rgb(238, 237, 237) !important;
+    border: 1px solid #fad54e;
+}
+
+.btn-cadastrar{
+    border-radius: 10px;
+    background-color: #b11f20;
+    color: white !important;
+}
+
+.btn-cadastrar:hover {
+    border-radius: 10px;
+    background-color: #fad54e;
+    color: black !important;
+}
+
+.fa-twitter-square:hover{
+    color: #00acee;
+    
+  }
+  
+  .fa-github-square:hover{
+    color: #171515;
+  }
+  
+  .fa-linkedin-square:hover{
+    color: #0072b1;
+  }
+  
+  /* Texo animado*/
+
+  body,html{margin:0;padding:0;height:500%;}
+body{
+  background-color: #fad54e;
+  background-size:cover;
+  font-family: 'Cabin Condensed', sans-serif;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align: center;
+}
