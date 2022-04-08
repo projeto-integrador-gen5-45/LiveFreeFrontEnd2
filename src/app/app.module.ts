@@ -17,6 +17,7 @@ import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-de
 import { ServicoEditComponent } from './edit/servico-edit/servico-edit.component';
 import { ServicoDeleteComponent } from './delete/servico-delete/servico-delete.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { UserEditComponent } from './edit/user-edit/user-edit.component';
     CategoriaDeleteComponent,
     ServicoEditComponent,
     ServicoDeleteComponent,
-    UserEditComponent
+    UserEditComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

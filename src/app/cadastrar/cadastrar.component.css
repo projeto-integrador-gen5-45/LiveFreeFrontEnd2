@@ -7,20 +7,24 @@
   }
 
 .btn-voltar {
+  border-radius: 10px;
   border: 1px solid #fad54e;
 }
 
 .btn-cadastrar {
-    background-color: #b11f20;
-    color: white;
+  border-radius: 10px;
+  background-color: #b11f20;
+  color: white;
 }
 
 .btn-voltar:hover {
+  border-radius: 10px;
   background-color: rgb(245, 245, 245);
   border: 1px solid #fad54e;
 }
 
 .btn-cadastrar:hover {
+  border-radius: 10px;
   background-color: #fad54e;
   color: black;
 }

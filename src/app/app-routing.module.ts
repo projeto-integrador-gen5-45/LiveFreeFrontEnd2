@@ -8,13 +8,16 @@ import { EntrarComponent } from './entrar/entrar.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
 
-{path:'', redirectTo:'entrar', pathMatch: 'full'},
+{path: '', redirectTo:'entrar', pathMatch: 'full'},
 
-{path:'entrar', component: EntrarComponent},
-{path:'cadastrar', component: CadastrarComponent},
+{path: "home", component: HomeComponent},
+
+{path: 'entrar', component: EntrarComponent},
+{path: 'cadastrar', component: CadastrarComponent},
 
 {path: 'inicio', component:InicioComponent},
 {path: 'categoria', component:CategoriaComponent},

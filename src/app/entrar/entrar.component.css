@@ -7,10 +7,12 @@ background-size: cover;
 }
 
 .btn-entrar {
+  border-radius: 10px;
   background-color: #fad54e;
 }
 
 .btn-entrar:hover {
+  border-radius: 10px;
   background-color: #b11f20;
   color: white;
 }
