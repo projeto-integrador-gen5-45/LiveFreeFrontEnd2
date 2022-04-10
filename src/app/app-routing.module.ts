@@ -15,7 +15,7 @@ import { MenuComponent } from './menu/menu.component';
 
 const routes: Routes = [
 
-{path: '', redirectTo:'entrar', pathMatch: 'full'},
+{path: '', redirectTo:'home', pathMatch: 'full'},
 
 {path: "home", component: HomeComponent},
 {path: "menu", component: MenuComponent},
