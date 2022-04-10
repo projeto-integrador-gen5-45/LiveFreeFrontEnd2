@@ -11,12 +11,14 @@ import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.com
 import { HomeComponent } from './home/home.component';
 import { ServicoEditComponent } from './edit/servico-edit/servico-edit.component';
 import { SobreComponent } from './sobre/sobre.component';
+import { MenuComponent } from './menu/menu.component';
 
 const routes: Routes = [
 
 {path: '', redirectTo:'entrar', pathMatch: 'full'},
 
 {path: "home", component: HomeComponent},
+{path: "menu", component: MenuComponent},
 
 {path: 'entrar', component: EntrarComponent},
 {path: 'cadastrar', component: CadastrarComponent},

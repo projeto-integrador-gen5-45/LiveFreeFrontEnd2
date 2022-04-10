@@ -1,18 +1,48 @@
 #img-bg {
-background-image:url('https://i.imgur.com/qjNBkcK.jpg');
+background-image:url("/assets/entrar1.jpg");
 min-height: 100vh;
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 }
 
-.btn-entrar {
+.caixaEntrar {
+  background-color: white;
+  background: rgba(255, 255, 255, 0.877);
+  border-radius: 15px;
+  width: 70vh;
+}
+
+h1 {
+  font-weight: 473;
+}
+
+.form {
+  padding: 50px 15px 0 15px;
+}
+
+.h-100 {
+  min-height: 100vh;
+}
+
+.btn-entrar{
+  margin-top: 10px;
   border-radius: 10px;
-  background-color: #fad54e;
+  background-color: #211e16;
+  color: white !important;
 }
 
 .btn-entrar:hover {
+  margin-top: 10px;
   border-radius: 10px;
-  background-color: #b11f20;
-  color: white;
+  background-color: #ffdea3;
+  color: black !important;
+}
+
+.link {
+  color: black;
+}
+
+p {
+  color: rgb(55, 55, 55);
 }

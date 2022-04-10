@@ -2,32 +2,57 @@
 
 .bg-home{
     height: 100vh;
-    background-image: url("https://i.imgur.com/OqL19K1.jpg");
+    background-image: url("../../assets/home1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
 }
 
+.navColor {
+  background-color: white;
+  margin-top: -10px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.645);
+  border-radius: 15px;
+}
+
 .btn-entrar {
-    border-radius: 10px;
-    border: 1px solid #fad54e;
+  margin-top: -10px;
+  border-radius: 10px;
+  border: 1px solid #000000;
 }
 
 .btn-entrar:hover {
+  margin-top: -10px;
+  border-radius: 10px;
+  background-color: #ffdea3 !important;
+  border: 1px solid #211e16;
+}
+
+.btn-sobre {
+    margin-top: -10px;
+    border-radius: 10px;
+    border: 1px solid #ffdea3;
+}
+
+.btn-sobre:hover {
+    margin-top: -10px;
     border-radius: 10px;
     background-color: rgb(238, 237, 237) !important;
-    border: 1px solid #fad54e;
+    border: 1px solid #ffdea3;
 }
 
 .btn-cadastrar{
+    margin-top: -10px;
     border-radius: 10px;
-    background-color: #b11f20;
+    background-color: #211e16;
     color: white !important;
 }
 
 .btn-cadastrar:hover {
+    margin-top: -10px;
     border-radius: 10px;
-    background-color: #fad54e;
+    background-color: #ffdea3;
     color: black !important;
 }
 
@@ -43,9 +68,15 @@
     font-size: 1.2rem
 }
 
+.caixaHome {
+  background-color: white;
+  background: rgba(255, 255, 255, 0.638);
+  border-radius: 15px;
+  width: 70vh;
+}
+
 h1 {
-    font-size: 100px;
-    font-style: italic;
+    font-size: 120px;
     font-weight: 900;
     margin-bottom: -15px;
   }
@@ -57,18 +88,19 @@ h1 {
   }
 
   p {
-    font-size: 20px;
+    padding: 10px;
+    font-size: 19px;
     font-weight: 500;
   }
 
-  .saibaMais {
+.saibaMais {
     font-size: 15px;
     font-style: italic;
     color: gray;
-  }
+}
 
-  .saibaMaisLink {
+.saibaMaisLink {
     font-size: 15px;
     font-style: italic;
-    color: #b11f20;
-  }
+    color: #211e16;
+}
