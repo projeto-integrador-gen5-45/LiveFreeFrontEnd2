@@ -19,6 +19,8 @@ import { ServicoDeleteComponent } from './delete/servico-delete/servico-delete.c
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { HomeComponent } from './home/home.component';
 import { SobreComponent } from './sobre/sobre.component';
+import { AlertaComponent } from './alerta/alerta.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 @NgModule({
@@ -36,13 +38,16 @@ import { SobreComponent } from './sobre/sobre.component';
     ServicoDeleteComponent,
     UserEditComponent,
     HomeComponent,
-    SobreComponent
+    SobreComponent,
+    AlertaComponent
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
   ],
   providers: [{
     provide: LocationStrategy,

@@ -1,3 +1,4 @@
+import { AlertasService } from './../service/alertas.service';
 import { AuthService } from './../service/auth.service';
 import { User } from './../model/User';
 import { Categoria } from './../model/Categoria';
@@ -29,7 +30,8 @@ export class InicioComponent implements OnInit {
     private router: Router,
     private servicoService: ServicoService,
     private categoriaService: CategoriaService,
-    private auth: AuthService
+    private auth: AuthService,
+    private alerta: AlertasService
   ) { }
 
   ngOnInit() {
@@ -78,7 +80,7 @@ export class InicioComponent implements OnInit {
 
     this.servicoService.postServico(this.servico).subscribe((resp: Servico) => {
       this.servico = resp
-      alert('Anúncio publicado com sucesso!')
+      this.alerta.showAlertSuccess('Anúncio realizado com sucesso!')
       this.servico = new Servico()
       this.getAllServicos()
     })
