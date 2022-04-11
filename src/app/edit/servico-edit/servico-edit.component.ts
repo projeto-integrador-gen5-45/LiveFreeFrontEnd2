@@ -52,7 +52,7 @@ export class ServicoEditComponent implements OnInit {
   }
 
   findAllCategorias(){
-    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) =>{
+    this.categoriaService.getAllCategorias().subscribe((resp: Categoria[]) =>{
       this.listaCategorias = resp
     })
   }

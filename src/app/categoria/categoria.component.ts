@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
+import { AlertasService } from '../service/alertas.service';
 import { CategoriaService } from '../service/categoria.service';
 
 @Component({
@@ -17,17 +18,25 @@ export class CategoriaComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private categoriaService: CategoriaService) { }
-
+    private categoriaService: CategoriaService, 
+    private alerta: AlertasService) { }
+    
   ngOnInit(){
     if(environment.token==''){
       this.router.navigate(['/entrar'])
       }
+    
+      if(environment.tipo != 'admin'){
+        
+        this.alerta.showAlertInfo('Você precisa ser adm para acessar essa rota')
+        this.router.navigate(['/inicio'])
+      }  
+
       this.findAllCategorias()
     }
 
     findAllCategorias(){
-      this.categoriaService.getAllCategoria().subscribe((resp: Categoria[])=>{
+      this.categoriaService.getAllCategorias().subscribe((resp: Categoria[])=>{
         this.listaCategorias = resp
 
       } )

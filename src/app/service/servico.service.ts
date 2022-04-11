@@ -23,6 +23,10 @@ export class ServicoService {
     return this.http.get<Servico>(`https://livefreebackend.herokuapp.com/servicos/${id}`, this.token)
   }
 
+  getByTituloServico(titulo:string): Observable<Servico[]>{
+    return this.http.get<Servico[]>(`https://livefreebackend.herokuapp.com/servicos/titulo/${titulo}`, this.token)
+  }
+
   postServico(servico: Servico) : Observable<Servico>{
     return this.http.post<Servico>('https://livefreebackend.herokuapp.com/servicos', servico, this.token)
   }
