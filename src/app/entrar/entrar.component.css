@@ -1,0 +1,48 @@
+#img-bg {
+background-image:url("https://viagemeturismo.abril.com.br/wp-content/uploads/2021/08/GettyImages-1185130861.jpg");
+min-height: 100vh;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.caixaEntrar {
+  background-color: white;
+  background: rgba(255, 255, 255, 0.877);
+  border-radius: 15px;
+  width: 70vh;
+}
+
+h1 {
+  font-weight: 473;
+}
+
+.form {
+  padding: 50px 15px 0 15px;
+}
+
+.h-100 {
+  min-height: 100vh;
+}
+
+.btn-entrar{
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: #211e16;
+  color: white !important;
+}
+
+.btn-entrar:hover {
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: #ffdea3;
+  color: black !important;
+}
+
+.link {
+  color: black;
+}
+
+p {
+  color: rgb(55, 55, 55);
+}

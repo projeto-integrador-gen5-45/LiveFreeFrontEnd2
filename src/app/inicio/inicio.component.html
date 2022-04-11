@@ -1,0 +1,139 @@
+<div class="container-fluid">
+  <div class="row d-flex align-items-center">  
+    <div class="col-md-12 heightImgBg" id="img-bg">
+      <div class="rowInicio row d-flex justify-content-center align-items-center text-center">
+        <div class="divInicio col-md-6 text-dark">
+          <h1 class="fs-80">Seja bem vindo(a)!</h1>
+          <h5 class="fs-23">Encontre atendimento especializado, humanizado e pague como poder.</h5>
+          <br>
+          <a class="btn btn-ver mr-2" href="#servicos">Ver serviços</a>
+          <button class="btn btn-criar" data-toggle="modal"
+          data-target="#novoServico">Criar anúncio de serviço</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mb-5 mt-5" id="servicos">
+  <nav>
+    <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
+
+      <a class="nav-link active text-dark font-weight-bold" id="nav-todosServicos-tab" data-toggle="tab" href="#todosServicos" role="tab" aria-controls="nav-todosServicos" aria-selected="true">Tudo</a>
+
+      <a (click)='findByIdUser()' class="nav-link text-dark font-weight-bold" id="nav-meusServicos-tab" data-toggle="tab" href="#meusServicos" role="tab" aria-controls="nav-meusServicos" aria-selected="false">Meus anúncios</a>
+
+      <a class="nav-link text-dark font-weight-bold" id="nav-servicoCategoria-tab" data-toggle="tab" href="#servicoCategoria" role="tab" aria-controls="nav-servicoCategoria" aria-selected="false">Serviços por categoria</a>
+
+    </div>
+  </nav>
+
+  <div class="tab-content" id="nav-tabContent">
+
+    <div class="tab-pane fade show active" id="todosServicos" role="tabpanel" aria-labelledby="nav-todosServicos-tab">
+ 
+      <div class="card-columns">
+        <div class="card text-center" *ngFor='let item of listaServicos'>
+          <div class="card-body">
+            <h5 class="card-title m-0">{{item.titulo}}</h5>
+            <small class="text-muted"> Categoria: {{item.categoria.descricao}}</small>
+            <p class="card-text mt-3">{{item.texto}}</p>
+            <p class="card-text"><small class="text-muted">
+              {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}
+            </small></p>
+
+            <p class="card-text"><small class="text-muted">
+              by: {{item.usuario.nome}}
+            </small></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="meusServicos" role="tabpanel" aria-labelledby="nav-meusServicos-tab">
+      
+      <div class="card-columns">
+        <div class="card text-center" *ngFor='let item of user.servico'>
+          <div class="card-body">
+            <h5 class="card-title m-0">{{item.titulo}}</h5>
+            <small class="text-muted"> Categoria: {{item.categoria.descricao}}</small>
+            <p class="card-text mt-3">{{item.texto}}</p>
+            <p class="card-text"><small class="text-muted">
+              {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}
+            </small></p>
+
+            <a [routerLink]="['/servico-edit', item.id]" class="text-info mr-3" href="">Editar</a>
+            <a [routerLink]="['/servico-delete', item.id]" class="text-danger" href="">Apagar</a>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="tab-pane fade" id="servicoCategoria" role="tabpanel" aria-labelledby="nav-servicoCategoria-tab">
+      
+      <div class="card-columns" *ngFor='let categoria of listaCategorias'>
+        <div class="card text-center" *ngFor='let item of categoria.servico'>
+          <div class="card-body">
+            <h5 class="card-title m-0">{{item.titulo}}</h5>
+            <p class="card-text mt-3">{{item.texto}}</p>
+            <p class="card-text"><small class="text-muted">
+              {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}
+            </small></p>
+
+            <p class="card-text"><small class="text-muted">
+              by: {{item.usuario.nome}}
+            </small></p>
+
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="novoServico" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Novo anúncio de serviço</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="titulo">Título</label>
+          <input [(ngModel)]='servico.titulo' type="text" class="form-control" id="titulo" placeholder="Digite o título">
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Texto</label>
+          <textarea [(ngModel)]='servico.texto' class="form-control" name="texto" id="texto" rows="3" ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Escolha uma categoria ou<a data-dismiss="modal" routerLink='/categoria'> cadastre uma nova</a>: </label>
+          <select name="categoria" id="categoria" class="form-control" [(ngModel)]='idCategoria' (change)='findByIdCategoria()'>
+            <option *ngFor='let item of listaCategorias' value="{{item.id}}">
+              {{item.descricao}}</option>
+          </select>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-warning" (click)='publicar()' data-dismiss="modal">Publicar</button>
+      </div>
+    </div>
+  </div>
+</div>

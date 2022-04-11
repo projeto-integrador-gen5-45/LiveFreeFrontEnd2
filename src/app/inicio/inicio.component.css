@@ -1,0 +1,56 @@
+.fs-80 {
+  font-size: 80pt;
+}
+
+.fs-23 {
+  font-size: 23pt;
+}
+
+#img-bg {
+  background-image: url("https://thumbs.dreamstime.com/b/skyline-de-sao-paulo-do-parque-de-parque-ibirapuera-63073812.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.heightImgBg {
+  height: 480px;
+}
+
+.rowInicio {
+  height: 480px;
+}
+
+.divInicio {
+  background-color: white;
+  background: rgba(255, 255, 255, 0.877);
+  border-radius: 15px;
+  padding: 40px;
+}
+
+.btn-criar{
+  margin-top: -10px;
+  border-radius: 10px;
+  background-color: #211e16;
+  color: white !important;
+}
+
+.btn-criar:hover {
+  margin-top: -10px;
+  border-radius: 10px;
+  background-color: #ffdea3;
+  color: black !important;
+}
+
+.btn-ver {
+  margin-top: -10px;
+  border-radius: 10px;
+  border: 1px solid #000000;
+}
+
+.btn-ver:hover {
+  margin-top: -10px;
+  border-radius: 10px;
+  background-color: #ffffff !important;
+  border: 1px solid #211e16;
+}

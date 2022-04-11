@@ -1,0 +1,26 @@
+<div class="container-fluid" id="img-bg">
+  <div class="row d-flex align-items-center justify-content-center h-100">
+    <div class="col-md-6">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-6 caixaEntrar">
+          <h1 class="text-center mb-3 display-3 textoEntrar">Entrar</h1>
+          <div class="form">              
+            <div class="form-group">
+                <label for="usuario">E-mail:</label>
+                <input [(ngModel)] = 'userLogin.usuario' class="form-control" type="text" name="usuario" id="usuario"
+                placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input [(ngModel)] = 'userLogin.senha' class="form-control" type="password" name="senha" id="senha"
+                placeholder="">
+              </div>
+              <div class= "d-flex justify-content-center">
+                <button type="submit" class="btn btn-entrar"(click)='entrar()'>Entrar</button>
+              </div>
+            </div>
+              <hr class="mt-5 mb-5">
+              <p class="text-center">Não tem uma conta? <a routerLink='/cadastrar' class="link">Cadastre-se</a>!</p>
+        </div>   
+      </div>
+</div>
