@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-rodape',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RodapeComponent implements OnInit {
 
-  constructor() { }
+  nome= environment.nome
+  foto= environment.foto
+  id= environment.id
 
-  ngOnInit(): void {
+  constructor(
+    private route: Router
+  ) { }
+
+  ngOnInit(){
   }
 
+  sair(){
+      this.route.navigate(['/home'])
+      environment.token =''
+      environment.nome =''
+      environment.foto =''
+      environment.id =0
+  }
 }
