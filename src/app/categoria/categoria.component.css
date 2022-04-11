@@ -1,0 +1,33 @@
+.bg-cover {
+  background-size: cover !important;
+}
+
+.btn-cadastrar:hover {
+margin-top: 10px;
+border-radius: 10px;
+background-color: #ffdea3;
+color: black !important;
+}
+
+.btn-cadastrar {
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: rgb(245, 245, 245);
+  background-color: #211e16;
+  color: white !important;
+}
+
+.btn-voltar:hover {
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: #ffdea3 !important;
+  border: 1px solid #211e16;
+}
+
+.btn-voltar {
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: rgb(245, 245, 245);
+  background-color: #E9D9CA;
+  color: black !important;
+}

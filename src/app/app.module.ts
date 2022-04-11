@@ -4,6 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { OrderModule } from 'ngx-order-pipe';
+
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -19,6 +22,7 @@ import { ServicoDeleteComponent } from './delete/servico-delete/servico-delete.c
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { HomeComponent } from './home/home.component';
 import { SobreComponent } from './sobre/sobre.component';
+import { AlertaComponent } from './alerta/alerta.component';
 
 
 @NgModule({
@@ -36,13 +40,17 @@ import { SobreComponent } from './sobre/sobre.component';
     ServicoDeleteComponent,
     UserEditComponent,
     HomeComponent,
-    SobreComponent
+    SobreComponent,
+    AlertaComponent
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot(),
+    OrderModule
   ],
   providers: [{
     provide: LocationStrategy,

@@ -17,13 +17,17 @@ constructor(
       headers: new HttpHeaders().set('Authorization', environment.token)
     }
 
-getAllCategoria(): Observable<Categoria[]>{
+getAllCategorias(): Observable<Categoria[]>{
       return this.http.get<Categoria[]>('https://livefreebackend.herokuapp.com/categoria',this.token)
   }
 
-  getByIdCategoria(id: number): Observable<Categoria>{
+getByIdCategoria(id: number): Observable<Categoria>{
     return this.http.get<Categoria>(`https://livefreebackend.herokuapp.com/categoria/${id}`, this.token)
-  }  
+  }
+
+getByDescricaoCategoria(descricao:string): Observable<Categoria[]>{
+    return this.http.get<Categoria[]>(`https://livefreebackend.herokuapp.com/categoria/descricao/${descricao}`, this.token)
+  }
 
 postCategoria(categoria:Categoria):Observable<Categoria>{
     return this.http.post<Categoria>('https://livefreebackend.herokuapp.com/categoria',categoria,this.token)

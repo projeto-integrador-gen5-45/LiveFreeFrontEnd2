@@ -1,3 +1,5 @@
+import { AlertasService } from './../service/alertas.service';
+import { AlertaComponent} from './../alerta/alerta.component';
 import { AuthService } from './../service/auth.service';
 import { User } from './../model/User';
 import { Categoria } from './../model/Categoria';
@@ -17,19 +19,25 @@ export class InicioComponent implements OnInit {
 
   servico: Servico = new Servico()
   listaServicos: Servico[]
+  tituloServ: string
 
   categoria: Categoria = new Categoria()
   listaCategorias: Categoria[]
   idCategoria: number
+  descricaoCategoria: string
 
   user: User = new User()
   idUser = environment.id
+
+  key = 'data'
+  reverse = true
 
   constructor(
     private router: Router,
     private servicoService: ServicoService,
     private categoriaService: CategoriaService,
-    private auth: AuthService
+    public auth: AuthService,
+    private alerta: AlertasService
   ) { }
 
   ngOnInit() {
@@ -46,7 +54,7 @@ export class InicioComponent implements OnInit {
   }
 
   getAllCategorias(){
-    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
+    this.categoriaService.getAllCategorias().subscribe((resp: Categoria[]) => {
       this.listaCategorias = resp
     })
   }
@@ -78,10 +86,30 @@ export class InicioComponent implements OnInit {
 
     this.servicoService.postServico(this.servico).subscribe((resp: Servico) => {
       this.servico = resp
-      alert('Anúncio publicado com sucesso!')
+      this.alerta.showAlertSuccess("Anúncio realizado com sucesso!")
       this.servico = new Servico()
       this.getAllServicos()
     })
+  }
+
+  findByTituloServico(){
+    if(this.tituloServ == ''){
+      this.getAllServicos()
+    } else {
+      this.servicoService.getByTituloServico(this.tituloServ).subscribe((resp: Servico[]) => {
+        this.listaServicos = resp
+      })
+    }
+  }
+
+  findByDescricaoCategoria(){
+    if(this.descricaoCategoria == ''){
+      this.getAllCategorias()
+    } else {
+      this.categoriaService.getByDescricaoCategoria(this.descricaoCategoria).subscribe((resp: Categoria[]) => {
+        this.listaCategorias = resp
+      })
+    }
   }
 
 
