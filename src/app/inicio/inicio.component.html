@@ -7,7 +7,7 @@
           <h5 class="fs-23">Encontre atendimento especializado, humanizado e pague como poder.</h5>
           <br>
           <a class="btn btn-ver mr-2" href="#servicos">Ver serviços</a>
-          <button class="btn btn-criar" data-toggle="modal" data-target="#novoServico">Criar anúncio de serviço</button>
+          <button class="btn btn-criar" data-toggle="modal" data-target="#novoServico" *ngIf='auth.adm() || auth.prof()'>Criar anúncio de serviço</button>
         </div>
       </div>
     </div>
@@ -28,7 +28,7 @@
     <!--Card de todos os serviços-->
     <div class="tab-pane fade show active" id="todosServicos" role="tabpanel" aria-labelledby="nav-todosServicos-tab">
      <!-- Caixinha de busca -->
-      <div class="row d-flex justify-content-center mt-5 mb-5">
+      <div class="row d-flex justify-content-center">
         <div class="col-md-4">
           <div class="form-group">
             <input type="text" class="form-control" id="titulo" placeholder="Digite um serviço para pesquisar" [(ngModel)]='tituloServ' (keyup)='findByTituloServico()'>
@@ -67,7 +67,7 @@
             <p class="card-text"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}}</small></p>
             <div class="botoesEditDelete">
             <button [routerLink]="['/servico-edit', item.id]" class="botaoEditar" href="" *ngIf='auth.adm()'>Editar</button>
-            <button [routerLink]="['/servico-delete', item.id]" class="botaoApagar"href="" *ngIf='auth.adm()' >Apagar</button>
+            <button [routerLink]="['/servico-delete', item.id]" class="botaoApagar"href="" *ngIf='auth.adm()'>Apagar</button>
             </div>
           </div>
         </div>

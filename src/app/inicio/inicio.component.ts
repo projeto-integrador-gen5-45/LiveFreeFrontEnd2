@@ -21,12 +21,10 @@ export class InicioComponent implements OnInit {
   listaServicos: Servico[]
   tituloServ: string
 
-
   categoria: Categoria = new Categoria()
   listaCategorias: Categoria[]
   idCategoria: number
   descricaoCategoria: string
-
 
   user: User = new User()
   idUser = environment.id
@@ -40,7 +38,7 @@ export class InicioComponent implements OnInit {
     private categoriaService: CategoriaService,
     public auth: AuthService,
     private alerta: AlertasService
-) { }
+  ) { }
 
   ngOnInit() {
 
@@ -93,6 +91,7 @@ export class InicioComponent implements OnInit {
       this.getAllServicos()
     })
   }
+
   findByTituloServico(){
     if(this.tituloServ == ''){
       this.getAllServicos()
@@ -112,5 +111,6 @@ export class InicioComponent implements OnInit {
       })
     }
   }
+
 
 }
