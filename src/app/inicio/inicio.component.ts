@@ -1,4 +1,4 @@
-import { AlertasService } from './../service/alertas.service';
+import { AlertasService } from '../service/alertas.service';
 import { AlertaComponent} from './../alerta/alerta.component';
 import { AuthService } from './../service/auth.service';
 import { User } from './../model/User';

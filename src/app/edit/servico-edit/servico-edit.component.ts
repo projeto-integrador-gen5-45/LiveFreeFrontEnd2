@@ -5,6 +5,7 @@ import { ServicoService } from '../../service/servico.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Servico } from '../../model/Servico';
 import { Component, OnInit } from '@angular/core';
+import { AlertasService } from 'src/app/service/alertas.service';
 
 @Component({
   selector: 'app-servico-edit',
@@ -23,7 +24,8 @@ export class ServicoEditComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private servicoService: ServicoService,
-    private categoriaService: CategoriaService
+    private categoriaService: CategoriaService,
+    private alerta: AlertasService
   ) { }
 
   ngOnInit() {
@@ -63,7 +65,7 @@ export class ServicoEditComponent implements OnInit {
 
     this.servicoService.putServico(this.servico).subscribe((resp: Servico) => {
       this.servico = resp
-      alert('Anúncio de serviço atualizado com sucesso!')
+      this.alerta.showAlertSuccess('Anúncio de serviço atualizado com sucesso!')
       this.router.navigate(['/inicio'])
     })
   }

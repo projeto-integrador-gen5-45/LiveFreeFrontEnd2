@@ -45,7 +45,7 @@ export class CategoriaComponent implements OnInit {
    cadastrar(){
       this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria)=>{
         this.categoria = resp;
-        alert('Categoria cadastrada com sucesso!');
+        this.alerta.showAlertSuccess("Categoria cadastrada com sucesso!");
         this.findAllCategorias();
         this.categoria = new Categoria()
       })

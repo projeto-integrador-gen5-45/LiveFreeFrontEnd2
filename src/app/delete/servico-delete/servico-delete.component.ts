@@ -3,6 +3,7 @@ import { ServicoService } from '../../service/servico.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Servico } from '../../model/Servico';
 import { Component, OnInit } from '@angular/core';
+import { AlertasService } from 'src/app/service/alertas.service';
 
 @Component({
   selector: 'app-servico-delete',
@@ -18,6 +19,7 @@ export class ServicoDeleteComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private servicoService: ServicoService,
+    private alerta: AlertasService
   ) { }
 
   ngOnInit() {
@@ -41,7 +43,7 @@ export class ServicoDeleteComponent implements OnInit {
 
   apagar(){
     this.servicoService.deleteServico(this.idPost).subscribe(()=>{
-      alert('Serviço apagado com sucesso!')
+      this.alerta.showAlertSuccess('Serviço apagado com sucesso!')
       this.router.navigate(['/inicio'])
     })
   }

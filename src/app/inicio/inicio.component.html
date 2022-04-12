@@ -66,6 +66,10 @@
             <p class="card-text"><small class="text-muted">
               by: {{item.usuario.nome}}
             </small></p>
+            
+            <a [routerLink]="['/servico-edit', item.id]" class="text-info mr-3" href=""*ngIf='auth.adm()'>Editar</a>
+            <a [routerLink]="['/servico-delete', item.id]" class="text-danger" href="" *ngIf='auth.adm()'>Apagar</a>
+          
           </div>
         </div>
       </div>
@@ -84,8 +88,8 @@
               {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}
             </small></p>
 
-            <a [routerLink]="['/servico-edit', item.id]" class="text-info mr-3" href="">Editar</a>
-            <a [routerLink]="['/servico-delete', item.id]" class="text-danger" href="">Apagar</a>
+            <a [routerLink]="['/servico-edit', item.id]" class="text-info mr-3" href=""*ngIf='auth.adm() || auth.prof()'>Editar</a>
+            <a [routerLink]="['/servico-delete', item.id]" class="text-danger" href=""*ngIf='auth.adm() || auth.prof()'>Apagar</a>
 
           </div>
         </div>
@@ -117,6 +121,9 @@
             <p class="card-text"><small class="text-muted">
               by: {{item.usuario.nome}}
             </small></p>
+
+            <a [routerLink]="['/servico-edit', item.id]" class="text-info mr-3" href="" *ngIf='auth.adm()'>Editar</a>
+            <a [routerLink]="['/servico-delete', item.id]" class="text-danger" href="" *ngIf='auth.adm()'>Apagar</a>
 
           </div>
         </div>

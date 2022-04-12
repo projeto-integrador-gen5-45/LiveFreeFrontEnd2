@@ -1,3 +1,4 @@
+import { AlertasService } from './../../service/alertas.service';
 import { environment } from '../../../environments/environment.prod';
 import { Router, ActivatedRoute } from '@angular/router';
 import { CategoriaService } from '../../service/categoria.service';
@@ -17,8 +18,8 @@ export class CategoriaDeleteComponent implements OnInit {
   constructor(
     private categoriaService: CategoriaService,
     private router: Router,
-    private route: ActivatedRoute
-  ) { }
+    private route: ActivatedRoute,
+    private alerta: AlertasService) { }
 
   ngOnInit() {
     if(environment.token == ''){
@@ -38,7 +39,7 @@ export class CategoriaDeleteComponent implements OnInit {
 
   apagar(){
     this.categoriaService.deleteCategoria(this.idCategoria).subscribe(()=>{
-      alert('Categoria apagada com sucesso!')
+      this.alerta.showAlertSuccess('Categoria apagada com sucesso!')
       this.router.navigate(['/categoria'])
     })
   }
