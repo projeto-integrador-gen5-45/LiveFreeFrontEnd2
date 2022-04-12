@@ -2,7 +2,7 @@
 
 .bg-home{
     height: 100vh;
-    background-image: url("../../assets/home1.jpg");
+    background-image: url("https://i.imgur.com/bg9C3DR.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
@@ -57,7 +57,7 @@
 }
 
 .gap-home{
-     gap: 12px;
+    gap: 12px;
 }
 
 .divChamada {

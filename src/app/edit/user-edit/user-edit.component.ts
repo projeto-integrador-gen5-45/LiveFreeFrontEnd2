@@ -22,7 +22,8 @@ export class UserEditComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private alerta: AlertasService    
-  ) { }
+    
+) { }
 
   ngOnInit() {
     window.scroll(0, 0)

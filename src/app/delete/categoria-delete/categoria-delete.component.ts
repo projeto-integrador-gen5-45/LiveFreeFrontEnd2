@@ -21,6 +21,7 @@ export class CategoriaDeleteComponent implements OnInit {
     private route: ActivatedRoute,
     private alerta: AlertasService) { }
 
+
   ngOnInit() {
     if(environment.token == ''){
       this.router.navigate(['/entrar'])

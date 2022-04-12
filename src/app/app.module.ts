@@ -24,12 +24,9 @@ import { HomeComponent } from './home/home.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { AlertaComponent } from './alerta/alerta.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
-    RodapeComponent,
     EntrarComponent,
     CadastrarComponent,
     InicioComponent,
@@ -39,11 +36,12 @@ import { AlertaComponent } from './alerta/alerta.component';
     ServicoEditComponent,
     ServicoDeleteComponent,
     UserEditComponent,
-    HomeComponent,
     SobreComponent,
-    AlertaComponent
+    AlertaComponent,
+    MenuComponent,
+    RodapeComponent,
+    HomeComponent
   ],
-
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -17,3 +17,40 @@ html
 .fs-18{
 font-size: 18pt;
 }
+
+.custon-outline {
+  padding: 3px !important;
+  width: 120px !important;
+  border: solid 1px #211e16 !important;
+  border-radius: 10px !important;
+  background-color: white !important;
+  color: #211e16 !important;
+}
+
+.custon-outline:hover {
+  padding: 3px !important;
+  width: 120px !important;
+  border: solid 1px #ffdea3 !important;
+  border-radius: 10px !important;
+  background-color: #ffdea3 !important;
+  color: black !important;
+}
+
+.custon-dark {
+  padding: 3px !important;
+  width: 120px !important;
+  border: solid 1px #211e16 !important;
+  border-radius: 10px !important;
+  background-color: #211e16 !important;
+  color: white !important;
+}
+
+.custon-dark:hover {
+  padding: 3px !important;
+  width: 120px !important;
+  border: 0 !important;
+  border-radius: 10px !important;
+  border: solid 1px #ffdea3 !important;
+  background-color: #ffdea3 !important;
+  color: black !important;
+}

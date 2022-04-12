@@ -1,39 +1,174 @@
-ul.social-network{
-list-style:none;
-padding: 0;
-}
-
-ul.social-network li{
-  display:inline;
-  margin: 0;
-  padding:5px;
-}
-
-.fa{
-  font-size: 35pt;
-  color: black;
-  padding: 10px;
-}
-
-.fa-twitter-square:hover{
-  color: #00acee;
-}
-
-.fa-github-square:hover{
-  color: #171515;
-}
-
-.fa-linkedin-square:hover{
-  color: #0072b1;
-}
-
-.list-footer{
+footer {
+  background-color: #211e16;
   display: flex;
+  flex-direction: row;
+  color: white;
+}
+
+h4 {
+  color: #ffdea3;
+}
+
+#um {
+  background-color: #211e16;
+  flex: 1;
+  margin: 15px 0 0 0px;
+}
+
+.lista {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.icones {
+  display: flex;
+  flex-direction: row;
+  font-size: 70px;
+  gap: 20px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+#dois {
+  background-color: #211e16;
+  flex: 1;
+  margin: 15px 0 0 15px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-.ac{
-
+#tres {
   background-color: #211e16;
-  color: white !important;
+  flex: 1;
+  margin: 15px 15px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+#e-mail {
+  width: 100%;
+}
+#assunto {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+form {
+  width: 75%;
+}
+
+.botaoEnviar {
+  display: block;
+  margin: 0 auto;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid #000000;
+}
+
+.botaoEnviar:hover {
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: #ffdea3 !important;
+  border: 1px solid #211e16;
+}
+
+.assinatura {
+  background-color: #211e16;
+  color: #ffdea3;
+}
+
+hr {
+  width: 20%;
+  border: 1px solid white;
+  color: white;
+}
+
+a {
+  color: white !important;
+  cursor: pointer;
+}
+
+.margemNegativa5 {
+  margin-bottom: -5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

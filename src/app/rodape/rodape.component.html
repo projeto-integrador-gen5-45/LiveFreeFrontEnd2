@@ -1,42 +1,44 @@
-<footer class="page-footer font-small pt-4 ac">
-  <!--bg-warning-->
-
-  <div class="container ">
-
-    <div class="row ">
-      <div class="col-md-12 d-flex justify-content-center">
-        <h4 class="text-light">Siga-nos nas redes sociais</h4>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 d-flex justify-content-center">
-        <ul class="social-network">
-          <li>
-            <a href="https://twitter.com/" target="_blank"
-                class="icoTwitter">
-                <i class="fa fa-twitter-square" aria-hidden="true"></i>
-            </a>
-          </li>
-
-          <li>
-            <a href="https://github.com/" target="_blank"
-                class="icoGithub">
-                <i class="fa fa-github-square" aria-hidden="true"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/" target="_blank"
-                class="icoLinkedin">
-                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-            </a>
-          </li>
-        </ul>  
-      </div>  
+<footer class="container-fluid">
+  <div id="um">
+    <h4 class="text-center">Navegue pelo site</h4>
+    <div class="lista">
+      <ul class="itensLista">
+        <li> <a routerLink="/home">Home;</a></li>
+        <li> <a routerLink="/sobre">Sobre;</a></li>
+        <li> <a routerLink="/entrar">Entrar;</a></li>
+        <li> <a routerLink="/cadastrar">Cadastrar;</a></li>
+        <li> <a routerLink="/inicio">Início;</a></li>
+        <li> <a routerLink="/categoria">Categoria;</a></li>
+        <li> <a (click)='sair()' class="navbar-nav">Sair;</a></li>
+        <li> <a routerLink="">Doações;</a></li>
+        <li> <a routerLink="">Trabalhe conosco.</a></li>
+      </ul>
     </div>
   </div>
-  <div class="footer-copyright bg-secondary text-center py-3">
-         <a class="text-light" target="blank" href="https://www.linkedin.com/">LiveFree© — 2022</a>
-     
-  </div> 
 
+  <div id="dois">
+    <h4>Siga-nos nas redes sociais</h4>
+    <div class="icones">
+      <a href="https://twitter.com/" target="_blank" class="icoTwitter"> <i class="fa fa-twitter-square text-white" aria-hidden="true"></i></a>
+      <a href="https://github.com/projeto-integrador-gen5-45/" target="_blank" class="icoGithub"><i class="fa fa-github-square text-white" aria-hidden="true"></i></a>
+      <a href="https://www.linkedin.com/" target="_blank" class="icoLinkedin"> <i class="fa fa-linkedin-square text-white" aria-hidden="true"></i></a>
+    </div>
+  </div>
+  <!--Adicionar script de alerta!-->
+  <div id="tres">
+    <h4>Contato</h4>
+    <p class="margemNegativa5">Ficou com dúvida? Entre em contato através do formulário abaixo.</p>
+    <p>Nossa equipe irá analisar seu contato e responder em até 24h. Muito obrigado!</p>
+    <form class="form" action="/script.js">
+      <label for="e-mail" class="margemNegativa5">E-mail:</label><br>
+      <input type="text" id="e-mail" name="e-mail" value="" placeholder="Seu e-mail"><br><br>
+      <label for="assunto" class="margemNegativa5">Assunto:</label><br>
+      <input type="text" id="assunto" name="assunto" value="" placeholder="Conta pra gente...">
+      <button type="submit" class="botaoEnviar">Enviar</button>
+    </form> 
+  </div>
 </footer>
+<div class="footer-copyright text-center py-3 assinatura">
+  <hr>
+  <span>LiveFree© 2022</span>
+</div>

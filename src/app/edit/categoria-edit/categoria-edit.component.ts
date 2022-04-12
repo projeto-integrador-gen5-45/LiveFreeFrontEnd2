@@ -19,6 +19,7 @@ export class CategoriaEditComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private alerta: AlertasService
+
   ) { }
 
   ngOnInit() {

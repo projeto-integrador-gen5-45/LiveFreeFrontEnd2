@@ -26,6 +26,7 @@ export class ServicoEditComponent implements OnInit {
     private servicoService: ServicoService,
     private categoriaService: CategoriaService,
     private alerta: AlertasService
+
   ) { }
 
   ngOnInit() {

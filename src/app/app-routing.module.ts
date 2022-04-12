@@ -13,6 +13,7 @@ import { ServicoEditComponent } from './edit/servico-edit/servico-edit.component
 import { SobreComponent } from './sobre/sobre.component';
 import { MenuComponent } from './menu/menu.component';
 
+
 const routes: Routes = [
 
 {path: '', redirectTo:'home', pathMatch: 'full'},

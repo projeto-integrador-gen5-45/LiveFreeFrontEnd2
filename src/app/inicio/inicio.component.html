@@ -1,50 +1,33 @@
 <div class="container-fluid">
   <div class="row d-flex align-items-center">
-
-    <div class="col-md-6">
-
-      <div class="row d-flex justify-content-center">
-        <div class="col-md-6 text-dark">
-          <h1 class="fs-54">Seja bem vindo(a)!</h1>
-          <h5 class="fs-18">expresse aqui os seus pensamentos e opiniões!</h5>
-          </div>
+    <div class="col-md-12 heightImgBg" id="img-bg">
+      <div class="rowInicio row d-flex justify-content-center align-items-center text-center">
+        <div class="divInicio col-md-6 text-dark">
+          <h1 class="fs-80">Seja bem vindo(a)!</h1>
+          <h5 class="fs-23">Encontre atendimento especializado, humanizado e pague como poder.</h5>
+          <br>
+          <a class="btn btn-ver mr-2" href="#servicos">Ver serviços</a>
+          <button class="btn btn-criar" data-toggle="modal" data-target="#novoServico">Criar anúncio de serviço</button>
+        </div>
       </div>
-
-      <div class="row d-flex justify-content-center mt-3 mb-5">
-        <div class="col-md-6">
-          <button class = "btn btn-dark mr-2" data-toggle="modal"
-          data-target="#novoServico" *ngIf='auth.adm() || auth.prof()'>Criar anúncio de serviço</button>
-          <a class="btn btn-outline-dark" href="#servicos">Ver serviços</a>
-          </div>
-      </div>
-    </div>
-
-    <div class="col-md-6 d-flex justify-content-center">
-      <img src="https://i.imgur.com/wJVcS7Y.png" alt="" widht="500px" height="500px" >
     </div>
   </div>
 </div>
-
+<!--tabs e cards de serviços-->
 <div class="container mb-5 mt-5" id="servicos">
   <nav>
     <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
-
       <a class="nav-link active text-dark font-weight-bold" id="nav-todosServicos-tab" data-toggle="tab" href="#todosServicos" role="tab" aria-controls="nav-todosServicos" aria-selected="true">Tudo</a>
-
-      <a (click)='findByIdUser()' class="nav-link text-dark font-weight-bold" id="nav-meusServicos-tab" data-toggle="tab" href="#meusServicos" role="tab" aria-controls="nav-meusServicos" aria-selected="false">Meus anúncios</a>
-
+      <a (click)='findByIdUser()' class="nav-link text-dark font-weight-bold" id="nav-meusServicos-tab"data-toggle="tab" href="#meusServicos" role="tab" aria-controls="nav-meusServicos" aria-selected="false">Meus anúncios</a>
       <a class="nav-link text-dark font-weight-bold" id="nav-servicoCategoria-tab" data-toggle="tab" href="#servicoCategoria" role="tab" aria-controls="nav-servicoCategoria" aria-selected="false">Serviços por categoria</a>
-
     </div>
   </nav>
-
- 
-      
-
-
-  <div class="tab-content mt-5" id="nav-tabContent">
-
+  <br>
+<!--Começo dos cards-->
+  <div class="tab-content" id="nav-tabContent">
+    <!--Card de todos os serviços-->
     <div class="tab-pane fade show active" id="todosServicos" role="tabpanel" aria-labelledby="nav-todosServicos-tab">
+     <!-- Caixinha de busca -->
       <div class="row d-flex justify-content-center mt-5 mb-5">
         <div class="col-md-4">
           <div class="form-group">
@@ -52,92 +35,63 @@
           </div>
         </div>
       </div>
-
-      <div class="card-columns">
-        <div class="card text-center" *ngFor='let item of listaServicos | orderBy : key:reverse'>
-          <div class="card-body">
-            <h5 class="card-title m-0">{{item.titulo}}</h5>
-            <small class="text-muted"> Categoria: {{item.categoria.descricao}}</small>
-            <p class="card-text mt-3">{{item.texto}}</p>
-            <p class="card-text"><small class="text-muted">
-              {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}
-            </small></p>
-
-            <p class="card-text"><small class="text-muted">
-              by: {{item.usuario.nome}}
-            </small></p>
-            
-            <a [routerLink]="['/servico-edit', item.id]" class="text-info mr-3" href=""*ngIf='auth.adm()'>Editar</a>
-            <a [routerLink]="['/servico-delete', item.id]" class="text-danger" href="" *ngIf='auth.adm()'>Apagar</a>
-          
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="tab-pane fade" id="meusServicos" role="tabpanel" aria-labelledby="nav-meusServicos-tab">
+      <!-- /Fim da caixinha de busca -->
       
-      <div class="card-columns">
-        <div class="card text-center" *ngFor='let item of user.servico | orderBy : key : reverse'>
-          <div class="card-body">
+      <div class="card" *ngFor='let item of listaServicos | orderBy : key:reverse'>
+          <div class="row">
+            <div class="col-md-4">
+              <img src="https://www.hrlact.org/wp-content/uploads/2020/12/generic-user-icon.jpg" alt="" class="img-fluid rounded-circle m-3">
+            </div>
+            <div class="col-md-8 card-body cardServico">
+              <h5 class="card-title">{{item.titulo}}</h5>
+              <p class="card-text"><small class="text-muted">Profissional: {{item.usuario.nome}}</small></p>
+              <p class="card-text"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}}</small></p> 
+              <small class="text-muted">Categoria do serviço: {{item.categoria.descricao}}</small>
+              <p class="card-text mt-3">{{item.texto}}</p> 
+              <button class="botaoAgendar">Agendar consulta</button>
+            </div>
+          </div>
+        </div>
+    </div>
+  <!--Card de meus serviços-->
+    <div class="tab-pane fade" id="meusServicos" role="tabpanel" aria-labelledby="nav-meusServicos-tab">
+      <div class="card" *ngFor='let item of user.servico | orderBy : key:reverse'>
+        <div class="row">
+          <div class="col-md-4">
+            <img src="https://www.hrlact.org/wp-content/uploads/2020/12/generic-user-icon.jpg" alt="" class="img-fluid rounded-circle m-3">
+          </div>
+          <div class="col-md-8 card-body cardServico">
             <h5 class="card-title m-0">{{item.titulo}}</h5>
             <small class="text-muted"> Categoria: {{item.categoria.descricao}}</small>
             <p class="card-text mt-3">{{item.texto}}</p>
-            <p class="card-text"><small class="text-muted">
-              {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}
-            </small></p>
-
-            <a [routerLink]="['/servico-edit', item.id]" class="text-info mr-3" href=""*ngIf='auth.adm() || auth.prof()'>Editar</a>
-            <a [routerLink]="['/servico-delete', item.id]" class="text-danger" href=""*ngIf='auth.adm() || auth.prof()'>Apagar</a>
-
+            <p class="card-text"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}}</small></p>
+            <div class="botoesEditDelete">
+            <button [routerLink]="['/servico-edit', item.id]" class="botaoEditar" href="" *ngIf='auth.adm()'>Editar</button>
+            <button [routerLink]="['/servico-delete', item.id]" class="botaoApagar"href="" *ngIf='auth.adm()' >Apagar</button>
+            </div>
           </div>
         </div>
       </div>
-
-
     </div>
-
-    <div class="tab-pane fade" id="servicoCategoria" role="tabpanel" aria-labelledby="nav-servicoCategoria-tab">
-    
-      <div class="row d-flex justify-content-center mt-5 mb-5">
-        <div class="col-md-4">
-          <div class="form-group">
-            <input type="text" class="form-control" id="titulo" placeholder="Digite uma categoria para pesquisar" [(ngModel)]='descricaoCategoria' (keyup)='findByDescricaoCategoria()'>
-          </div>
+  <!--Card de serviços por categoria-->
+  <div class="tab-pane fade" id="servicoCategoria" role="tabpanel" aria-labelledby="nav-servicoCategoria-tab">
+    <div class="card-columns" *ngFor='let categoria of listaCategorias | orderBy : key:reverse'>
+      <div class="card text-center" *ngFor='let item of categoria.servico'>
+        <div class="card-body">
+          <h5 class="card-title m-0">{{item.titulo}}</h5>
+          <p class="card-text mt-3">{{item.texto}}</p>
+          <p class="card-text"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small></p>
+          <p class="card-text"><small class="text-muted">Profissional: {{item.usuario.nome}}</small></p>
         </div>
       </div>
- 
-
-      <div class="card-columns" *ngFor='let categoria of listaCategorias'>
-        <div class="card text-center" *ngFor='let item of categoria.servico  | orderBy : key : reverse'>
-          <div class="card-body">
-            <h5 class="card-title m-0">{{item.titulo}}</h5>
-            <p class="card-text mt-3">{{item.texto}}</p>
-            <p class="card-text"><small class="text-muted">
-              {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}
-            </small></p>
-
-            <p class="card-text"><small class="text-muted">
-              by: {{item.usuario.nome}}
-            </small></p>
-
-            <a [routerLink]="['/servico-edit', item.id]" class="text-info mr-3" href="" *ngIf='auth.adm()'>Editar</a>
-            <a [routerLink]="['/servico-delete', item.id]" class="text-danger" href="" *ngIf='auth.adm()'>Apagar</a>
-
-          </div>
-        </div>
-      </div>
-
-
-
-    </div>
+  <!--Fechamento das divs la de cima-->
   </div>
 </div>
 
 
 <!-- Modal -->
-<div class="modal fade" id="novoServico" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="novoServico" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -168,8 +122,8 @@
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-warning" (click)='publicar()' data-dismiss="modal">Publicar</button>
+        <button class="custon-outline mr-4" data-dismiss="modal">Cancelar</button>
+        <button class="custon-dark" (click)='publicar()' data-dismiss="modal">Publicar</button>
       </div>
     </div>
   </div>

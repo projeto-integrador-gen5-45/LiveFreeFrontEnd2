@@ -20,7 +20,7 @@ export class ServicoDeleteComponent implements OnInit {
     private route: ActivatedRoute,
     private servicoService: ServicoService,
     private alerta: AlertasService
-  ) { }
+) { }
 
   ngOnInit() {
 
