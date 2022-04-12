@@ -1,14 +1,15 @@
-<body>
-
-  <div class="container-fluid  bg-sobre">
+  <div class="container-fluid  bg-home">
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-      <a class="navbar-brand" href="#" routerLink="/home">Logo</a>
+       <a class="navbar-brand navColor" href="#"><img src="../../assets/logoLiveFree.png" height="50" alt=""></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto gap-sobre">
+        <ul class="navbar-nav ml-auto gap-home">
+          <li class="nav-item ">
+            <button class="btn-sobre btn" routerLink="/sobre">Sobre</button>
+          </li>
           <li class="nav-item ">
             <button class="btn-entrar btn" routerLink="/entrar">Entrar</button>
           </li>
@@ -18,22 +19,6 @@
         </ul>
       </div>
     </nav>
-  </div>
-
-
-  <header id="header" class="fixed-top d-flex align-items-center ">
-    <div class="container d-flex justify-content-between align-items-center">
-
-      <div class="logo">
-
-      </div>
-
-
-    </div>
-    <br>
-  </header>
-
-  <br>
 
   <section id="hero" class="d-flex align-items-center">
     <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
@@ -117,14 +102,14 @@
     </div>
   </section>
 
+  <div class="section-title">
+    <span>Serviços</span>
+    <h2>Serviços</h2>
+    <p>Conheça nossos serviços disponibilizados na plataforma.</p>
+  </div>
+
   <section id="services" class="services">
     <div class="container">
-
-      <div class="section-title">
-        <span>Serviços</span>
-        <h2>Serviços</h2>
-        <p>Conheça nossos serviços disponibilizados na plataforma.</p>
-      </div>
 
       <div class="row">
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up">
@@ -205,7 +190,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member">
               <div class="member-img">
-                <img src="https://i.imgur.com/YUkxumb.jpg" class="img-fluid" alt="">
+                <img src="https://avatars.githubusercontent.com/u/98482533?v=4" class="img-fluid" alt="">
                 <div class="social">
                   <a href="https://twitter.com/" target="_blank" class="icoTwitter">
                     <i class="fa fa-twitter-square" aria-hidden="true"></i>
@@ -231,7 +216,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member">
               <div class="member-img">
-                <img src="https://i.imgur.com/YUkxumb.jpg" class="img-fluid" alt="">
+                <img src="https://avatars.githubusercontent.com/u/84543029?v=4" class="img-fluid" alt="">
                 <div class="social">
                   <a href="https://twitter.com/" target="_blank" class="icoTwitter">
                     <i class="fa fa-twitter-square" aria-hidden="true"></i>
@@ -257,7 +242,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member">
               <div class="member-img">
-                <img src="https://i.imgur.com/zSiiTV8.jpg" class="img-fluid" alt="">
+                <img src="https://avatars.githubusercontent.com/u/44437770?v=4" class="img-fluid" alt="">
                 <div class="social">
                   <a href="https://twitter.com/" target="_blank" class="icoTwitter">
                     <i class="fa fa-twitter-square" aria-hidden="true"></i>
@@ -283,7 +268,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member">
               <div class="member-img">
-                <img src="https://i.imgur.com/zSiiTV8.jpg" class="img-fluid" alt="">
+                <img src="https://avatars.githubusercontent.com/u/87617076?v=4" class="img-fluid" alt="">
                 <div class="social">
                   <a href="https://twitter.com/" target="_blank" class="icoTwitter">
                     <i class="fa fa-twitter-square" aria-hidden="true"></i>
@@ -310,7 +295,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member">
               <div class="member-img">
-                <img src="https://i.imgur.com/zSiiTV8.jpg" class="img-fluid" alt="">
+                <img src="https://avatars.githubusercontent.com/u/96946666?v=4" class="img-fluid" alt="">
                 <div class="social">
                   <a href="https://twitter.com/" target="_blank" class="icoTwitter">
                     <i class="fa fa-twitter-square" aria-hidden="true"></i>
@@ -338,7 +323,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member">
               <div class="member-img">
-                <img src="https://i.imgur.com/zSiiTV8.jpg" class="img-fluid" alt="">
+                <img src="https://avatars.githubusercontent.com/u/8996967?v=4" class="img-fluid" alt="">
                 <div class="social">
                   <a href="https://twitter.com/" target="_blank" class="icoTwitter">
                     <i class="fa fa-twitter-square" aria-hidden="true"></i>
@@ -353,7 +338,7 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Thiago Santos</h4>
+                <h4>Thiago Faccipieri</h4>
                 <span>Desenvolvedor</span>
                 <p>Amet labore numquam corrupti est. Nostrum amet voluptas consectetur dolor voluptatem architecto
                   distinctio consequuntur eligendi. Quam impedit enim aut nesciunt aut dicta quam exercitationem.
@@ -369,5 +354,4 @@
     </section>
 
   </main>
-
-</body>
+<app-rodape></app-rodape>
