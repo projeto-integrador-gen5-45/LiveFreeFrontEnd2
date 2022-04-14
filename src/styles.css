@@ -54,3 +54,10 @@ font-size: 18pt;
   background-color: #ffdea3 !important;
   color: black !important;
 }
+
+/* Rodapé */
+
+.iconsRodape {
+  color: white;
+  height: 50px;
+}
