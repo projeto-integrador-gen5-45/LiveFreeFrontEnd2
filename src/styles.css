@@ -18,6 +18,23 @@ html
 font-size: 18pt;
 }
 
+.custon-amarelinho {
+  padding: 3px !important;
+  width: 120px !important;
+  border: solid 1px #ffdea3 !important;
+  border-radius: 10px !important;
+  color: #211e16 !important;
+}
+
+.custon-amarelinho:hover {
+  padding: 3px !important;
+  width: 120px !important;
+  border: solid 1px #ffdea3 !important;
+  border-radius: 10px !important;
+  background-color: lightgray !important;
+  color: black !important;
+}
+
 .custon-outline {
   padding: 3px !important;
   width: 120px !important;

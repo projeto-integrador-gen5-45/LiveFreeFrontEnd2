@@ -49,9 +49,9 @@
               <small class="text-muted">Categoria do serviço: {{item.categoria.descricao}}</small>
               <p class="card-text mt-3">{{item.texto}}</p>
               <div class="botoesEditDelete">
-                <button class="custon-outline mr-1" [routerLink]="['/servico-edit', item.id]" href="" *ngIf='auth.adm()'>Editar anúncio</button> 
-                <button class="custon-dark mr-1" [routerLink]="['/servico-delete', item.id]" href="" *ngIf='auth.adm()'>Apagar anúncio</button> 
-                <button class="botaoAgendar">Agendar consulta</button>
+                <button class="custon-amarelinho mr-1" [routerLink]="['/servico-edit', item.id]" href="" *ngIf='auth.adm()'>Editar anúncio</button> 
+                <button class="custon-outline mr-1" [routerLink]="['/servico-delete', item.id]" href="" *ngIf='auth.adm()'>Apagar anúncio</button> 
+                <button onclick="alert('Consulta agendada! Aguarde contato do profissional responsável.')" class="custon-dark">Agendar consulta</button>
               </div>
             </div>
           </div>
